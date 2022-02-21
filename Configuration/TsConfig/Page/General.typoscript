@@ -1,0 +1,2 @@
+# Include RTE-Configuration 
+RTE.default.preset = BOOTSTRAP_EXAMPLE
