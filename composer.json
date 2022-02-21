@@ -1,0 +1,41 @@
+{
+    "name": "lbr-media/typo3-extension-bootstrap-example",
+    "type": "typo3-cms-extension",
+    "description": "Distribution package for this site",
+    "license": "GPL-2.0-or-later",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/lbr-media/typo3-extension-bootstrap.git"
+        }
+    ],
+    "require": {
+        "php": ">=7.4.1",
+        "typo3/cms-core": "^11.5",
+        "typo3/cms-tstemplate": "^11.5"
+    },
+    "require-dev": {
+        "helhum/typo3-console": "^7.0.2",
+        "typo3/cms-belog": "^11.5",
+        "typo3/cms-lowlevel": "^11.5",
+        "typo3/cms-scheduler": "^11.5",
+        "typo3/cms-setup": "^11.5",
+        "lbr-media/typo3-extension-bootstrap": "dev-main"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.0.x-dev"
+        },
+        "typo3/cms": {
+            "extension-key": "bootstrap_example",
+            "web-dir": ".build/public"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "LBRmedia\\BootstrapExample\\": "Classes"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
