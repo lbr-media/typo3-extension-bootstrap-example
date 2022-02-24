@@ -1,2 +1,2 @@
 # Include RTE-Configuration 
-RTE.default.preset = BOOTSTRAP_EXAMPLE
+// RTE.default.preset = BOOTSTRAP_EXAMPLE
