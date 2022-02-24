@@ -1,0 +1,38 @@
+base: /
+errorHandling:
+  -
+    errorCode: 404
+    errorHandler: Fluid
+    errorFluidTemplate: 'EXT:bootstrap/Resources/Private/Templates/Page/404.html'
+    errorFluidTemplatesRootPath: 'EXT:bootstrap/Resources/Private/Templates/Page/'
+    errorFluidLayoutsRootPath: 'EXT:bootstrap/Resources/Private/Layouts/Page/'
+    errorFluidPartialsRootPath: 'EXT:bootstrap/Resources/Private/Partials/Page/'
+  -
+    errorCode: 403
+    errorHandler: Fluid
+    errorFluidTemplate: 'EXT:bootstrap/Resources/Private/Templates/Page/403.html'
+    errorFluidTemplatesRootPath: 'EXT:bootstrap/Resources/Private/Templates/Page/'
+    errorFluidLayoutsRootPath: 'EXT:bootstrap/Resources/Private/Layouts/Page/'
+    errorFluidPartialsRootPath: 'EXT:bootstrap/Resources/Private/Partials/Page/'
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    languageId: 0
+    base: /
+    typo3Language: de
+    locale: de_DE.UTF-8
+    iso-639-1: de
+    navigationTitle: Deutsch
+    hreflang: de-de
+    direction: ltr
+    flag: de
+    websiteTitle: ''
+rootPageId: 1
+websiteTitle: ''
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    map:
+      sitemap.xml: 1533906435
+
