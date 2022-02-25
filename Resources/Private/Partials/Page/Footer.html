@@ -1,0 +1,75 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true">
+
+<f:section name="Default"><f:spaceless>
+    <footer class="mt-auto">
+        <div class="container-xl">
+            <div class="row g-0 justify-content-between">
+                <div class="col-auto">
+                    <f:if condition="{footer_menu_projects -> f:count()}">
+                        <nav{f:if(condition:footer_menu_projects_label.0, then:' aria-labelledby="footer-menu-projects-label"')}>
+                            <f:if condition="{footer_menu_projects_label.0}">
+                                <div id="footer-menu-projects-label" class="h4"><f:render partial="Navigation/Link" section="Default" arguments="{item:footer_menu_projects_label.0}" /></div>
+                            </f:if>
+                            <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_projects}" />
+                        </nav>
+                    </f:if>
+                </div>
+                <div class="col-auto">
+                    <f:if condition="{footer_menu_portfolio -> f:count()}">
+                        <nav{f:if(condition:footer_menu_portfolio_label.0, then:' aria-labelledby="footer-menu-portfolio-label"')}>
+                            <f:if condition="{footer_menu_portfolio_label.0}">
+                                <div id="footer-menu-portfolio-label" class="h4"><f:render partial="Navigation/Link" section="Default" arguments="{item:footer_menu_portfolio_label.0}" /></div>
+                            </f:if>
+                            <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_portfolio}" />
+                        </nav>
+                    </f:if>
+                </div>
+                <div class="col-auto">
+                    <f:if condition="{footer_menu_brand -> f:count()}">
+                        <nav{f:if(condition:footer_menu_brand_label.0, then:' aria-labelledby="footer-menu-brand-label"')}>
+                            <f:if condition="{footer_menu_brand_label.0}">
+                                <div id="footer-menu-brand-label" class="h4"><f:render partial="Navigation/Link" section="Default" arguments="{item:footer_menu_brand_label.0}" /></div>
+                            </f:if>
+                            <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_brand}" />
+                        </nav>
+                    </f:if>
+                </div>
+                <div class="col-auto">
+                    <f:if condition="{footer_menu_contact -> f:count()}">
+                        <nav{f:if(condition:footer_menu_contact_label.0, then:' aria-labelledby="footer-menu-contact-label"')}>
+                            <f:if condition="{footer_menu_contact_label.0}">
+                                <div id="footer-menu-contact-label" class="h4"><f:render partial="Navigation/Link" section="Default" arguments="{item:footer_menu_contact_label.0}" /></div>
+                            </f:if>
+                            <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_contact}" />
+                        </nav>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container-xl">
+            <div class="border-top border-dark py-3 d-flex g-0 justify-content-between align-items-center">
+                <div>
+                    {footer_copyright -> f:format.raw()}
+                </div>
+                <div>
+                    <f:if condition="{footer_menu_legal -> f:count()}">
+                        <nav{f:if(condition:footer_menu_legal_label.0, then:' aria-label="{footer_menu_legal_label.0.title}"')}>
+                            <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_legal, additionalClass:' nav'}" />
+                        </nav>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+
+        <div class="py-3 text-white bg-dark">
+            <div class="container-xl">
+                {footer_creator -> f:format.raw()}
+            </div>
+        </div>
+    </footer>
+</f:spaceless></f:section>
+
+</html>

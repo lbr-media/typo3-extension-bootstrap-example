@@ -1,0 +1,95 @@
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+    templateName < lib.pagelayout
+
+    layoutRootPaths {
+        20 = {$plugin.tx_bootstrapexample.view.layoutRootPath}Page/
+    }
+    partialRootPaths {
+        20 = {$plugin.tx_bootstrapexample.view.partialRootPath}Page/
+    }
+    templateRootPaths {
+        20 = {$plugin.tx_bootstrapexample.view.templateRootPath}Page/
+    }
+
+    settings < plugin.tx_bootstrap.settings
+    settings.bootstrap_example < plugin.tx_bootstrapexample.settings
+
+    dataProcessing {
+        # Navigation "Projects"
+        300 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        300 {
+            special = list
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.projects}
+            levels = 1
+            includeSpacer = 1
+            as = footer_menu_legal_label
+        }
+
+        305 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        305 {
+            special = directory
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.projects}
+            levels = 1
+            as = footer_menu_legal
+        }
+
+        # Navigation "Projects"
+        310 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        310 {
+            special = list
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.projects}
+            levels = 1
+            includeSpacer = 1
+            as = footer_menu_projects_label
+        }
+
+        315 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+        315 {
+            special = directory
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.projects}
+            levels = 1
+            as = footer_menu_projects
+        }
+
+        # Navigation "Portfolio"
+        320 < .300
+        320 {
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.portfolio}
+            as = footer_menu_portfolio_label
+        }
+
+        325 < .305
+        325 {
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.portfolio}
+            as = footer_menu_portfolio
+        }
+
+        # Navigation "Brand"
+        330 < .300
+        330 {
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.brand}
+            as = footer_menu_brand_label
+        }
+
+        335 < .305
+        335 {
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.brand}
+            as = footer_menu_brand
+        }
+
+        # Navigation "Contact"
+        340 < .300
+        340 {
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.contact}
+            as = footer_menu_contact_label
+        }
+
+        345 < .305
+        345 {
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.contact}
+            as = footer_menu_contact
+        }
+    }
+}

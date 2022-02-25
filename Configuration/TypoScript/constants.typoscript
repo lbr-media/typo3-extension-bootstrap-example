@@ -1,0 +1,19 @@
+plugin.tx_bootstrapexample {
+    view {
+        templateRootPath = EXT:bootstrap_example/Resources/Private/Templates/
+        partialRootPath = EXT:bootstrap_example/Resources/Private/Partials/
+        layoutRootPath = EXT:bootstrap_example/Resources/Private/Layouts/
+    }
+
+    rootPageId = 1
+
+    pid {
+        menu {
+            legal = 4
+            projects = 7
+            portfolio = 3
+            brand = 2
+            contact = 13
+        }
+    }
+}
