@@ -17,11 +17,11 @@ page.10 {
     settings.bootstrap_example < plugin.tx_bootstrapexample.settings
 
     dataProcessing {
-        # Navigation "Projects"
+        # Navigation "Legal"
         300 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
         300 {
             special = list
-            special.value = {$plugin.tx_bootstrapexample.pid.menu.projects}
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.footer.legal}
             levels = 1
             includeSpacer = 1
             as = footer_menu_legal_label
@@ -30,65 +30,65 @@ page.10 {
         305 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
         305 {
             special = directory
-            special.value = {$plugin.tx_bootstrapexample.pid.menu.projects}
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.footer.legal}
             levels = 1
             as = footer_menu_legal
         }
 
-        # Navigation "Projects"
+        # Navigation "Text"
         310 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
         310 {
             special = list
-            special.value = {$plugin.tx_bootstrapexample.pid.menu.projects}
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.footer.text}
             levels = 1
             includeSpacer = 1
-            as = footer_menu_projects_label
+            as = footer_menu_text_label
         }
 
         315 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
         315 {
             special = directory
-            special.value = {$plugin.tx_bootstrapexample.pid.menu.projects}
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.footer.text}
             levels = 1
-            as = footer_menu_projects
+            as = footer_menu_text
         }
 
-        # Navigation "Portfolio"
+        # Navigation "Text & Media"
         320 < .300
         320 {
-            special.value = {$plugin.tx_bootstrapexample.pid.menu.portfolio}
-            as = footer_menu_portfolio_label
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.footer.text_media}
+            as = footer_menu_textmedia_label
         }
 
         325 < .305
         325 {
-            special.value = {$plugin.tx_bootstrapexample.pid.menu.portfolio}
-            as = footer_menu_portfolio
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.footer.text_media}
+            as = footer_menu_textmedia
         }
 
-        # Navigation "Brand"
+        # Navigation "Special elements"
         330 < .300
         330 {
-            special.value = {$plugin.tx_bootstrapexample.pid.menu.brand}
-            as = footer_menu_brand_label
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.footer.specials}
+            as = footer_menu_specials_label
         }
 
         335 < .305
         335 {
-            special.value = {$plugin.tx_bootstrapexample.pid.menu.brand}
-            as = footer_menu_brand
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.footer.specials}
+            as = footer_menu_specials
         }
 
         # Navigation "Contact"
         340 < .300
         340 {
-            special.value = {$plugin.tx_bootstrapexample.pid.menu.contact}
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.footer.contact}
             as = footer_menu_contact_label
         }
 
         345 < .305
         345 {
-            special.value = {$plugin.tx_bootstrapexample.pid.menu.contact}
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.footer.contact}
             as = footer_menu_contact
         }
     }

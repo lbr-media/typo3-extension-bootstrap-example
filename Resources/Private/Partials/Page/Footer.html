@@ -1,66 +1,71 @@
 <html
     xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:bs="http://typo3.org/ns/LBRmedia/Bootstrap/ViewHelpers"
     data-namespace-typo3-fluid="true">
 
 <f:section name="Default"><f:spaceless>
-    <footer class="mt-auto">
+    <footer class="mt-auto border-top border-dark pt-3 bg-light">
         <div class="container-xl">
-            <div class="row g-0 justify-content-between">
-                <div class="col-auto">
-                    <f:if condition="{footer_menu_projects -> f:count()}">
-                        <nav{f:if(condition:footer_menu_projects_label.0, then:' aria-labelledby="footer-menu-projects-label"')}>
-                            <f:if condition="{footer_menu_projects_label.0}">
-                                <div id="footer-menu-projects-label" class="h4"><f:render partial="Navigation/Link" section="Default" arguments="{item:footer_menu_projects_label.0}" /></div>
-                            </f:if>
-                            <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_projects}" />
-                        </nav>
-                    </f:if>
-                </div>
-                <div class="col-auto">
-                    <f:if condition="{footer_menu_portfolio -> f:count()}">
-                        <nav{f:if(condition:footer_menu_portfolio_label.0, then:' aria-labelledby="footer-menu-portfolio-label"')}>
-                            <f:if condition="{footer_menu_portfolio_label.0}">
-                                <div id="footer-menu-portfolio-label" class="h4"><f:render partial="Navigation/Link" section="Default" arguments="{item:footer_menu_portfolio_label.0}" /></div>
-                            </f:if>
-                            <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_portfolio}" />
-                        </nav>
-                    </f:if>
-                </div>
-                <div class="col-auto">
-                    <f:if condition="{footer_menu_brand -> f:count()}">
-                        <nav{f:if(condition:footer_menu_brand_label.0, then:' aria-labelledby="footer-menu-brand-label"')}>
-                            <f:if condition="{footer_menu_brand_label.0}">
-                                <div id="footer-menu-brand-label" class="h4"><f:render partial="Navigation/Link" section="Default" arguments="{item:footer_menu_brand_label.0}" /></div>
-                            </f:if>
-                            <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_brand}" />
-                        </nav>
-                    </f:if>
-                </div>
-                <div class="col-auto">
-                    <f:if condition="{footer_menu_contact -> f:count()}">
-                        <nav{f:if(condition:footer_menu_contact_label.0, then:' aria-labelledby="footer-menu-contact-label"')}>
-                            <f:if condition="{footer_menu_contact_label.0}">
-                                <div id="footer-menu-contact-label" class="h4"><f:render partial="Navigation/Link" section="Default" arguments="{item:footer_menu_contact_label.0}" /></div>
-                            </f:if>
-                            <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_contact}" />
-                        </nav>
-                    </f:if>
-                </div>
+            <div class="row g-0 justify-content-md-between">
+                <f:variable name="col_classes" value="col-sm-6 col-md-auto" />
+                <f:if condition="{footer_menu_text -> f:count()}">
+                    <bs:Tag tag="nav" forceClosingTag="true" additionalAttributesIfNotEmpty="{
+                        class:col_classes,
+                        aria-labelledby:'{f:if(condition:footer_menu_text_label.0, then:\'footer-menu-text-label\')}'
+                    }">
+                        <f:if condition="{footer_menu_text_label.0}">
+                            <div id="footer-menu-text-label" class="h4 mb-0"><f:render partial="Navigation/Link" section="Default" arguments="{item:footer_menu_text_label.0}" /></div>
+                        </f:if>
+                        <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_text}" />
+                    </bs:Tag>
+                </f:if>
+                <f:if condition="{footer_menu_textmedia_label -> f:count()}">
+                    <bs:Tag tag="nav" forceClosingTag="true" additionalAttributesIfNotEmpty="{
+                        class:col_classes,
+                        aria-labelledby:'{f:if(condition:footer_menu_textmedia_label.0, then:\'footer-menu-textmedia-label\')}'
+                    }">
+                        <f:if condition="{footer_menu_textmedia_label.0}">
+                            <div id="footer-menu-textmedia-label" class="h4 mb-0"><f:render partial="Navigation/Link" section="Default" arguments="{item:footer_menu_textmedia_label.0}" /></div>
+                        </f:if>
+                        <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_textmedia}" />
+                    </bs:Tag>
+                </f:if>
+                <f:if condition="{footer_menu_specials -> f:count()}">
+                    <bs:Tag tag="nav" forceClosingTag="true" additionalAttributesIfNotEmpty="{
+                        class:col_classes,
+                        aria-labelledby:'{f:if(condition:footer_menu_specials_label.0, then:\'footer-menu-specials-label\')}'
+                    }">
+                        <f:if condition="{footer_menu_specials_label.0}">
+                            <div id="footer-menu-specials-label" class="h4 mb-0"><f:render partial="Navigation/Link" section="Default" arguments="{item:footer_menu_specials_label.0}" /></div>
+                        </f:if>
+                        <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_specials}" />
+                    </bs:Tag>
+                </f:if>
+                <f:if condition="{footer_menu_contact -> f:count()}">
+                    <bs:Tag tag="nav" forceClosingTag="true" additionalAttributesIfNotEmpty="{
+                        class:col_classes,
+                        aria-labelledby:'{f:if(condition:footer_menu_contact_label.0, then:\'footer-menu-contact-label\')}'
+                    }">
+                        <f:if condition="{footer_menu_contact_label.0}">
+                            <div id="footer-menu-contact-label" class="h4 mb-0"><f:render partial="Navigation/Link" section="Default" arguments="{item:footer_menu_contact_label.0}" /></div>
+                        </f:if>
+                        <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_contact}" />
+                    </bs:Tag>
+                </f:if>
             </div>
         </div>
         
         <div class="container-xl">
-            <div class="border-top border-dark py-3 d-flex g-0 justify-content-between align-items-center">
-                <div>
-                    {footer_copyright -> f:format.raw()}
-                </div>
-                <div>
-                    <f:if condition="{footer_menu_legal -> f:count()}">
-                        <nav{f:if(condition:footer_menu_legal_label.0, then:' aria-label="{footer_menu_legal_label.0.title}"')}>
-                            <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_legal, additionalClass:' nav'}" />
-                        </nav>
-                    </f:if>
-                </div>
+            <div class="border-top border-dark row row-cols-sm-auto g-0 pt-3 pb-2 pb-sm-3 justify-content-between align-items-center">
+                {footer_copyright -> f:format.raw()}
+                <f:if condition="{footer_menu_legal -> f:count()}">
+                    <bs:Tag tag="nav" forceClosingTag="true" additionalAttributesIfNotEmpty="{
+                        class:'nav',
+                        aria-label:'{f:if(condition:footer_menu_legal_label.0, then:\'{footer_menu_legal_label.0.title}\')}'
+                    }">
+                        <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_legal, additionalClass:' nav'}" />
+                    </bs:Tag>
+                </f:if>
             </div>
         </div>
 

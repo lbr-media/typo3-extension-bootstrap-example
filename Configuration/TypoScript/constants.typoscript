@@ -9,11 +9,19 @@ plugin.tx_bootstrapexample {
 
     pid {
         menu {
-            legal = 4
-            projects = 7
-            portfolio = 3
-            brand = 2
-            contact = 13
+            footer {
+                legal = 2
+                text = 13
+                text_media = 10
+                specials = 7
+                contact = 5
+            }
         }
     }
+}
+
+styles.bootstrap {
+    nav_link_inactive_classes = nav-link text-dark
+    nav_link_current_classes = nav-link active text-primary
+    nav_link_active_classes = nav-link active text-primary
 }
