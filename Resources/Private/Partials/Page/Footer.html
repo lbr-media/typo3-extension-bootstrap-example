@@ -8,7 +8,7 @@
         <div class="container-xl">
             <div class="row g-0 justify-content-md-between">
                 <f:variable name="col_classes" value="col-sm-6 col-md-auto" />
-                <f:if condition="{footer_menu_text -> f:count()}">
+                <f:if condition="{footer_menu_text_label.0}||{footer_menu_text -> f:count()}">
                     <bs:Tag tag="nav" forceClosingTag="true" additionalAttributesIfNotEmpty="{
                         class:col_classes,
                         aria-labelledby:'{f:if(condition:footer_menu_text_label.0, then:\'footer-menu-text-label\')}'
@@ -19,7 +19,7 @@
                         <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_text}" />
                     </bs:Tag>
                 </f:if>
-                <f:if condition="{footer_menu_textmedia_label -> f:count()}">
+                <f:if condition="{footer_menu_textmedia_label.0}||{footer_menu_textmedia_label -> f:count()}">
                     <bs:Tag tag="nav" forceClosingTag="true" additionalAttributesIfNotEmpty="{
                         class:col_classes,
                         aria-labelledby:'{f:if(condition:footer_menu_textmedia_label.0, then:\'footer-menu-textmedia-label\')}'
@@ -30,7 +30,7 @@
                         <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_textmedia}" />
                     </bs:Tag>
                 </f:if>
-                <f:if condition="{footer_menu_specials -> f:count()}">
+                <f:if condition="{footer_menu_specials_label.0}||{footer_menu_specials -> f:count()}">
                     <bs:Tag tag="nav" forceClosingTag="true" additionalAttributesIfNotEmpty="{
                         class:col_classes,
                         aria-labelledby:'{f:if(condition:footer_menu_specials_label.0, then:\'footer-menu-specials-label\')}'
@@ -41,15 +41,15 @@
                         <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_specials}" />
                     </bs:Tag>
                 </f:if>
-                <f:if condition="{footer_menu_contact -> f:count()}">
+                <f:if condition="{footer_menu_info_label.0}||{footer_menu_info -> f:count()}">
                     <bs:Tag tag="nav" forceClosingTag="true" additionalAttributesIfNotEmpty="{
                         class:col_classes,
-                        aria-labelledby:'{f:if(condition:footer_menu_contact_label.0, then:\'footer-menu-contact-label\')}'
+                        aria-labelledby:'{f:if(condition:footer_menu_info_label.0, then:\'footer-menu-info-label\')}'
                     }">
-                        <f:if condition="{footer_menu_contact_label.0}">
-                            <div id="footer-menu-contact-label" class="h4 mb-0"><f:render partial="Navigation/Link" section="Default" arguments="{item:footer_menu_contact_label.0}" /></div>
+                        <f:if condition="{footer_menu_info_label.0}">
+                            <div id="footer-menu-info-label" class="h4 mb-0"><f:render partial="Navigation/Link" section="Default" arguments="{item:footer_menu_info_label.0}" /></div>
                         </f:if>
-                        <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_contact}" />
+                        <f:render partial="Navigation/OneLevel" section="Default" arguments="{items:footer_menu_info}" />
                     </bs:Tag>
                 </f:if>
             </div>

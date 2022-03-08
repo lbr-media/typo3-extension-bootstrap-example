@@ -14,13 +14,18 @@ plugin.tx_bootstrapexample {
                 text = 13
                 text_media = 10
                 specials = 7
-                contact = 5
+                info = 5
             }
         }
     }
 }
 
 styles.bootstrap {
+    // header_pattern = ###TAG_START######HEADER######TAG_END###
+    header_subheader_pattern = ###TAG_START######HEADER###<small class="d-block lead text-uppercase">###SUBHEADER###</small>###TAG_END###
+    // header_date_pattern = <span class="d-block" datetime="###DATE_DATETIME###">###DATE###</span>###TAG_START######HEADER######TAG_END###
+    header_subheader_date_pattern = <span class="d-block" datetime="###DATE_DATETIME###">###DATE###</span>###TAG_START######HEADER###<small class="d-block lead text-uppercase">###SUBHEADER###</small>###TAG_END###
+
     nav_link_inactive_classes = nav-link text-dark
     nav_link_current_classes = nav-link active text-primary
     nav_link_active_classes = nav-link active text-primary

@@ -79,17 +79,17 @@ page.10 {
             as = footer_menu_specials
         }
 
-        # Navigation "Contact"
+        # Navigation "Info"
         340 < .300
         340 {
-            special.value = {$plugin.tx_bootstrapexample.pid.menu.footer.contact}
-            as = footer_menu_contact_label
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.footer.info}
+            as = footer_menu_info_label
         }
 
         345 < .305
         345 {
-            special.value = {$plugin.tx_bootstrapexample.pid.menu.footer.contact}
-            as = footer_menu_contact
+            special.value = {$plugin.tx_bootstrapexample.pid.menu.footer.info}
+            as = footer_menu_info
         }
     }
 }
