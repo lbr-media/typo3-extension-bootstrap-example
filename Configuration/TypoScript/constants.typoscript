@@ -29,4 +29,6 @@ styles.bootstrap {
     nav_link_inactive_classes = nav-link text-dark
     nav_link_current_classes = nav-link active text-primary
     nav_link_active_classes = nav-link active text-primary
+
+    nav_dropdown_excludeUidList = 2
 }
