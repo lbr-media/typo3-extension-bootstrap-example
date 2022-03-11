@@ -17,7 +17,7 @@ $EM_CONF[$_EXTKEY] = [
     'title' => 'Distribution package for bootstrap extension',
     'description' => 'This package delivers a new website.',
     'category' => 'distribution',
-    'version' => '1.0.1',
+    'version' => '1.0.2',
     'state' => 'stable',
     'clearcacheonload' => 1,
     'author' => 'Marcel',
@@ -25,7 +25,7 @@ $EM_CONF[$_EXTKEY] = [
     'constraints' => [
         'depends' => [
             'typo3' => '11.5.0-11.5.99',
-            'bootstrap' => '1.0.0-1.0.99',
+            'bootstrap' => '1.0.16-1.0.99',
         ],
         'conflicts' => [],
         'suggests' => [],
