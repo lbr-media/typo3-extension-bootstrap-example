@@ -16,23 +16,22 @@ errorHandling:
     errorFluidPartialsRootPath: 'EXT:bootstrap/Resources/Private/Partials/Page/'
 languages:
   -
-    title: Deutsch
+    title: English
     enabled: true
     languageId: 0
     base: /
     typo3Language: de
-    locale: de_DE.UTF-8
-    iso-639-1: de
-    navigationTitle: Deutsch
-    hreflang: de-de
+    locale: en_GB.UTF-8
+    iso-639-1: en
+    navigationTitle: English
+    hreflang: en-GB
     direction: ltr
-    flag: de
+    flag: gb
     websiteTitle: ''
 rootPageId: 1
-websiteTitle: ''
 routeEnhancers:
   PageTypeSuffix:
     type: PageType
     map:
       sitemap.xml: 1533906435
-
+websiteTitle: ''
