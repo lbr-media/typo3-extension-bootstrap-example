@@ -1,0 +1,22 @@
+# Settings for additional fields in tt_content
+plugin.tx_bootstrap.settings.form.element {
+    
+    # Configuration used in field tt_content.tx_bootstrap_header_predefined.
+    # When selected the content elements header element will be modified.
+    #
+    # Properties:
+    # - label = Label used in \LBRmedia\Bootstrap\UserFunc\TCA\TtContentHeader->predefinedHeader()
+    # - value = key in PredefinedHeader which is used for reference in \LBRmedia\Bootstrap\ViewHelpers\HeaderViewHelper->render()
+    # - outerWrap = [OUTER_WRAP_1]<headline class="[CLASSES]">[LINK_START][ICON1][TEXT][ICON2][LINK_END]</headline>[OUTER_WRAP_2]
+    # - innerWrap = <headline class="[CLASSES]">[LINK_START][INNER_WRAP_1][ICON1][TEXT][ICON2][INNER_WRAP_2][LINK_END]</headline>
+    # - additionalClass = <headline class="[CLASSES] [ADDITIONAL_CLASS]">[LINK_START][ICON1][TEXT][ICON2][LINK_END]</headline>
+    PredefinedHeader {
+        10 {
+            label = Icon-Example
+            value = 10
+            outerWrap = <div class="text-center"><div class="border rounded d-inline-block p-2 m-1">|</div></div>
+            innerWrap =
+            additionalClass = h1 mb-0
+        }
+    }
+}

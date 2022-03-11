@@ -9,3 +9,4 @@ plugin.tx_bootstrapexample {
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_example/Configuration/TypoScript/Basics/HeaderData.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_example/Configuration/TypoScript/Basics/Fluidtemplate.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_example/Configuration/TypoScript/Basics/FormField.typoscript">
