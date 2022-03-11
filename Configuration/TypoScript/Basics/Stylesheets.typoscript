@@ -1,0 +1,3 @@
+page.includeCSS {
+    fontawesome = fileadmin/bootstrap_example/assets/fontawesome/css/all.min.css
+}

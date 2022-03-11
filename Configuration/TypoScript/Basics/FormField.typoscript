@@ -1,15 +1,5 @@
 # Settings for additional fields in tt_content
 plugin.tx_bootstrap.settings.form.element {
-    
-    # Configuration used in field tt_content.tx_bootstrap_header_predefined.
-    # When selected the content elements header element will be modified.
-    #
-    # Properties:
-    # - label = Label used in \LBRmedia\Bootstrap\UserFunc\TCA\TtContentHeader->predefinedHeader()
-    # - value = key in PredefinedHeader which is used for reference in \LBRmedia\Bootstrap\ViewHelpers\HeaderViewHelper->render()
-    # - outerWrap = [OUTER_WRAP_1]<headline class="[CLASSES]">[LINK_START][ICON1][TEXT][ICON2][LINK_END]</headline>[OUTER_WRAP_2]
-    # - innerWrap = <headline class="[CLASSES]">[LINK_START][INNER_WRAP_1][ICON1][TEXT][ICON2][INNER_WRAP_2][LINK_END]</headline>
-    # - additionalClass = <headline class="[CLASSES] [ADDITIONAL_CLASS]">[LINK_START][ICON1][TEXT][ICON2][LINK_END]</headline>
     PredefinedHeader {
         10 {
             label = Icon-Example
@@ -17,6 +7,21 @@ plugin.tx_bootstrap.settings.form.element {
             outerWrap = <div class="text-center"><div class="border rounded d-inline-block p-2 m-1">|</div></div>
             innerWrap =
             additionalClass = h1 mb-0
+        }
+    }
+
+    BootstrapIcons {
+        20 {
+            label = Font Awesome 6
+
+            # key of the icon set
+            key = fa6
+
+            # Stylesheets to include in backend for the wizard
+            includeCss.10 = ../../fileadmin/bootstrap_example/assets/fontawesome/css/all.min.css
+
+            # HTML to show in wizard
+            includeHtml = ../../typo3conf/ext/bootstrap_example/Resources/Public/FontaweseomIconsFormField.html
         }
     }
 }
