@@ -13,11 +13,11 @@
     ],
     "require": {
         "typo3/cms-core": "^11.5",
-        "lbr-media/typo3-extension-bootstrap": "^1.0.2"
+        "lbr-media/typo3-extension-bootstrap": "dev-main"
     },
     "extra": {
         "branch-alias": {
-            "dev-master": "1.0.x-dev"
+            "dev-main": "1.0.x-dev"
         },
         "typo3/cms": {
             "extension-key": "bootstrap_example"
